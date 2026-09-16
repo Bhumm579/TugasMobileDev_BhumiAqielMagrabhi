@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_app_01/login_clone.dart';
-import 'package:flutter_app_01/pages/login_clone_page.dart';
+import 'package:flutter_app_01/pages/login_clone_page01.dart';
 // import 'package:flutter_app_01/kalkulator_page.dart';
 // import 'package:flutter_app_01/login_page.dart';
 
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: LoginClonePage(),
+      home: LoginClonePage01(),
     );
   }
 }

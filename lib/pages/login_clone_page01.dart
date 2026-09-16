@@ -4,17 +4,11 @@ import 'package:flutter_app_01/components/custom_textfield.dart';
 import 'package:flutter_app_01/components/custom_button.dart';
 import 'package:flutter_app_01/components/custom_textbutton.dart';
 
-class LoginClonePage extends StatefulWidget {
-  const LoginClonePage({super.key});
-
-  @override
-  State<LoginClonePage> createState() => _LoginClonePageState();
-}
-
-class _LoginClonePageState extends State<LoginClonePage> {
-  TextEditingController txtUsername = TextEditingController();
-  TextEditingController txtPassword = TextEditingController();
-  String statusLogin = "";
+class LoginClonePage01 extends StatelessWidget {
+  LoginClonePage01({super.key});
+  final TextEditingController txtUsername = TextEditingController();
+  final TextEditingController txtPassword = TextEditingController();
+  final String statusLogin = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,27 +61,14 @@ class _LoginClonePageState extends State<LoginClonePage> {
             margin: const EdgeInsets.symmetric(horizontal: 16.0),
             child: CustomButton(
               text: "Log In",
-              onPressed: () {
-                setState(() {
-                  String username = txtUsername.text.toString();
-                  String password = txtPassword.text.toString();
-
-                  if (username == "admin" && password == "admin") {
-                    statusLogin = "Admin";
-                  } else {
-                    statusLogin = "Gagal";
-                  }
-                });
-              },
+              onPressed: () {},
               style: CustomButtonStyle(),
             ),
           ),
           CustomTextButton(
             text: "Forgot password?",
-            onPressed: () {
-              print("Tombol Lupa Password diklik!");
-            },
-            style: const CustomTextButtonStyle(
+            onPressed: () {},
+            style: CustomTextButtonStyle(
               textColor: Colors.white,
               fontSize: 16.0,
               textWeight: FontWeight.bold,
