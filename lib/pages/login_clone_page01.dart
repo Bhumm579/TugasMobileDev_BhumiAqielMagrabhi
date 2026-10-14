@@ -14,7 +14,7 @@ class LoginClonePage01 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "English (US)\n" + statusLogin.toString(),
+          "English (US)\n$statusLogin",
           style: const TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.bold,

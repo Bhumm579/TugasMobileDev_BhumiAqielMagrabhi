@@ -17,7 +17,7 @@ class _LoginClonePageState extends State<LoginClonePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "English (US)\n" + statusLogin.toString(),
+          "English (US)\n$statusLogin",
           style: const TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.bold,

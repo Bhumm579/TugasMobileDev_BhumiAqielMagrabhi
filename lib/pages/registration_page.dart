@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_app_01/components/custom_button.dart';
+import 'package:flutter_app_01/components/custom_gender_radiogroup.dart';
 import 'package:flutter_app_01/components/custom_textfield.dart';
 import 'package:flutter_app_01/routes.dart';
 import 'package:get/get.dart';
@@ -9,12 +10,13 @@ import 'package:flutter_app_01/controllers/registration_controller.dart';
 class RegistrationPage extends StatelessWidget {
   RegistrationPage({super.key});
   final TextEditingController txtUsername = TextEditingController();
-  final RegistrationController controller = RegistrationController();
+  final RegistrationController controller = Get.put(RegistrationController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('REGISTRATION'),
+        title: Text('REGISTRATION', style: TextStyle(color: Colors.white)),
         backgroundColor: const Color(0xFF1f1e22),
       ),
       backgroundColor: const Color(0xFF1f1e22),
@@ -26,26 +28,15 @@ class RegistrationPage extends StatelessWidget {
             border: CustomTextFieldBorder(),
             hintText: 'Username',
           ),
-          ValueListenableBuilder(
-            valueListenable: controller.selectedGender,
-            builder: (context, gender, child) {
-              return RadioGroup<Gender>(
-                groupValue: gender,
-                onChanged: (controller.setGender),
-                child: const Column(
-                  children: [
-                    ListTile(
-                      title: const Text('Laki-laki'),
-                      leading: const Radio<Gender>(value: Gender.lakiLaki),
-                    ),
-                    ListTile(
-                      title: const Text('Perempuan'),
-                      leading: const Radio<Gender>(value: Gender.perempuan),
-                    ),
-                  ],
-                ),
-              );
-            },
+          Obx(
+            () => CustomRadioGroup<Gender>(
+              groupValue: controller.selectedGender.value,
+              onChanged: controller.setGender,
+              options: const {
+                Gender.lakiLaki: 'Laki-laki',
+                Gender.perempuan: 'Perempuan',
+              },
+            ),
           ),
           CustomButton(
             text: 'Register',

@@ -16,7 +16,6 @@ class DetailMakananPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Gambar
               Image.network(
                 makanan.gambarMakanan,
                 height: 200,
@@ -26,7 +25,6 @@ class DetailMakananPage extends StatelessWidget {
 
               const SizedBox(height: 15),
 
-              // Nama makanan
               Text(
                 makanan.namaMakanan,
                 style: const TextStyle(
@@ -37,7 +35,6 @@ class DetailMakananPage extends StatelessWidget {
 
               const SizedBox(height: 8),
 
-              // Rating
               Row(
                 children: [
                   ...List.generate(
@@ -51,7 +48,6 @@ class DetailMakananPage extends StatelessWidget {
 
               const SizedBox(height: 10),
 
-              // Harga
               Text(
                 makanan.hargaMakanan,
                 style: TextStyle(
@@ -63,7 +59,6 @@ class DetailMakananPage extends StatelessWidget {
 
               const SizedBox(height: 20),
 
-              // Deskripsi
               const Text(
                 'Deskripsi',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -78,7 +73,6 @@ class DetailMakananPage extends StatelessWidget {
 
               const SizedBox(height: 20),
 
-              // Review
               const Text(
                 'Review',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),

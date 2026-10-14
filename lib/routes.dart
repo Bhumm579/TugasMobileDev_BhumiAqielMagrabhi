@@ -1,5 +1,4 @@
 import 'package:flutter_app_01/pages/confirm_registration_page.dart';
-import 'package:flutter_app_01/pages/detailmakanan_page.dart';
 import 'package:flutter_app_01/pages/listmakanan_page.dart';
 import 'package:flutter_app_01/pages/registration_page.dart';
 import 'package:get/get.dart';
