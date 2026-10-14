@@ -1,5 +1,6 @@
+import 'package:flutter_app_01/routes.dart';
+
 import '../models/makanan_model.dart';
-import '../pages/detailmakanan_page.dart';
 
 import 'package:get/get.dart';
 
@@ -52,6 +53,6 @@ class ListMakananController extends GetxController {
   ].obs;
 
   void navigateToDetail(MakananModel makanan) {
-    Get.to(() => DetailMakananPage(makanan: makanan));
+    Get.toNamed(Routes.detail_makanan, arguments: {'makanan': makanan});
   }
 }
